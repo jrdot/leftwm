@@ -3,7 +3,7 @@
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # down the last running theme
-if [[ -f "/tmp/leftwm-theme-down" ]] then
+if [[ -f "/tmp/leftwm-theme-down" ]]; then
     /tmp/leftwm-theme-down
     rm /tmp/leftwm-theme-down
 fi
@@ -18,7 +18,7 @@ fi
 # boot picom or compton if it exists
 if [[ -x "$(command -v picom)" ]]; then
   picom &> /dev/null &
-elif [[ -x "$(command -v compton)" ]] then
+elif [[ -x "$(command -v compton)" ]]; then
   compton &> /dev/null &
 fi
 
