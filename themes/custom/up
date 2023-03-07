@@ -30,3 +30,7 @@ if [[ -x "$(command -v feh)" ]]; then
   feh --bg-scale $SCRIPTPATH/background.jpg
 fi
 
+# keyboard layout
+localectl --no-convert set-x11-keymap br
+localectl set-keymap br-abnt2
+localectl set-locale LANG=pt_BR.UTF-8
